@@ -16,13 +16,15 @@ public class Atirar : MonoBehaviour
     public GameObject CanvasAtirar;
     //public float delay = 1f;
 
-    public int Municao;
-    public int MunicaoparaTexto;
-    public int MaxMunicao = 10;
+    public float Municao;
+    public float MunicaoparaTexto;
+    public float MaxMunicao = 10;
 
-    public int MunicaoGasta = 1;
+    public float MunicaoGasta = 1;
 
     public Text textoMunicao;
+
+    public Image Tanquedetinta;
 
 
     // Start is called before the first frame update
@@ -33,7 +35,7 @@ public class Atirar : MonoBehaviour
 
         Municao = MaxMunicao;
 
-        
+
     }
 
     // Update is called once per frame
@@ -41,6 +43,10 @@ public class Atirar : MonoBehaviour
     {
         textoMunicao.text = MunicaoparaTexto.ToString();
         MunicaoparaTexto = Municao * 10;
+
+        Tanquedetinta.fillAmount = Municao / 10f;
+
+
     }
     IEnumerator ParadeAtirar()
     {
