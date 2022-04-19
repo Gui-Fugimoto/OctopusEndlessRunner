@@ -8,10 +8,13 @@ public class Atirar : MonoBehaviour
     public GameObject Polvo;
 
     public GameObject InkShot;
+    public GameObject SuperInkShot;
 
     public GameObject objetoMunicao;
 
     public Button BotaoAtirar;
+
+    public float TempoSuperTiro;
 
     public GameObject CanvasAtirar;
     //public float delay = 1f;
@@ -22,9 +25,15 @@ public class Atirar : MonoBehaviour
 
     public float MunicaoGasta = 1;
 
+    public float TempoProximoInkshot;
+
     public Text textoMunicao;
 
     public Image Tanquedetinta;
+
+    public static float deltaTime;
+    public float timer = 0f;
+
 
 
     // Start is called before the first frame update
@@ -46,11 +55,12 @@ public class Atirar : MonoBehaviour
 
         Tanquedetinta.fillAmount = Municao / 10f;
 
+        timer += Time.deltaTime;
 
     }
     IEnumerator ParadeAtirar()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(TempoProximoInkshot);
         CanvasAtirar.SetActive(true);
     }
 
@@ -61,10 +71,16 @@ public class Atirar : MonoBehaviour
             Debug.Log("atirou");
             Municao -= MunicaoGasta;
             Instantiate(InkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
+            timer = 0f;
             CanvasAtirar.SetActive(false);
             StartCoroutine(ParadeAtirar());
         }
-        if (Municao <= 1)
+        if (Municao >= 1 && timer > 3f) 
+        {
+            Instantiate(SuperInkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
+            Debug.Log("SuperTiro");
+        }
+            if (Municao <= 1)
         {
             CanvasAtirar.SetActive(false);
         }
