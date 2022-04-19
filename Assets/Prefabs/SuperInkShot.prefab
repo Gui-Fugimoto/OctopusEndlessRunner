@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 4890222669029254732}
   - component: {fileID: 7587361910343923482}
   - component: {fileID: 5056470716317201672}
-  - component: {fileID: 6114988532175241926}
   - component: {fileID: 7632668596526764706}
-  - component: {fileID: 5883413867840794495}
+  - component: {fileID: -1492783944586943650}
   m_Layer: 0
   m_Name: SuperInkShot
   m_TagString: Untagged
@@ -98,20 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6114988532175241926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001659759408071153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f93636cc7d1da4685b986c2732ab32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 700
-  Inimigo: {fileID: 6668250232395323976, guid: b922b162c8e541246ab75ee391181f58, type: 3}
 --- !u!54 &7632668596526764706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5883413867840794495
+--- !u!114 &-1492783944586943650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,8 +122,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001659759408071153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f93636cc7d1da4685b986c2732ab32, type: 3}
+  m_Script: {fileID: 11500000, guid: 69c07740e522f6543a056869baaf13e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0
+  velocity: 1000
   Inimigo: {fileID: 0}

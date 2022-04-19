@@ -66,21 +66,29 @@ public class Atirar : MonoBehaviour
 
     public void atirar()
     {
-        if (Municao >= 1)
+        if (Municao >= 1 && timer >= TempoSuperTiro)
         {
+            Debug.Log("SuperTiro");
+            Instantiate(SuperInkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
+            Municao -= MunicaoGasta;
+            timer = 0f;
+            CanvasAtirar.SetActive(false);
+            StartCoroutine(ParadeAtirar());
+
+        }
+        else if (Municao >= 1)
+        {
+
             Debug.Log("atirou");
             Municao -= MunicaoGasta;
             Instantiate(InkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
             timer = 0f;
             CanvasAtirar.SetActive(false);
             StartCoroutine(ParadeAtirar());
+
+
         }
-        if (Municao >= 1 && timer > 3f) 
-        {
-            Instantiate(SuperInkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
-            Debug.Log("SuperTiro");
-        }
-            if (Municao <= 1)
+        if (Municao < 1)
         {
             CanvasAtirar.SetActive(false);
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -904,7 +904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.4, y: -35.6}
+  m_AnchoredPosition: {x: 3.399994, y: -35.600006}
   m_SizeDelta: {x: 106.5973, y: 25.4125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623534733
@@ -2287,7 +2287,7 @@ MonoBehaviour:
   SuperInkShot: {fileID: 1001659759408071153, guid: 023d5a300f9c8a9478b9708039c74760, type: 3}
   objetoMunicao: {fileID: 773810228}
   BotaoAtirar: {fileID: 1862307832}
-  TempoSuperTiro: 0
+  TempoSuperTiro: 4
   CanvasAtirar: {fileID: 800877661}
   Municao: 0
   MunicaoparaTexto: 0

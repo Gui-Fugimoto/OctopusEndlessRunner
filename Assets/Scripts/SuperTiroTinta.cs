@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TiroTinta : MonoBehaviour
+public class SuperTiroTinta : MonoBehaviour
 {
     public float velocity;
     public GameObject Inimigo;
@@ -10,7 +10,7 @@ public class TiroTinta : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * velocity);
-        Destroy(gameObject, 4);
+        Destroy(gameObject, 6);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class TiroTinta : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Inimigo"))
         {
-            Destroy(gameObject);
+            
         }
 
         if (other.gameObject.CompareTag("Obstaculo"))
