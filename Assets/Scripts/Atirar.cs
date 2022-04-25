@@ -34,6 +34,8 @@ public class Atirar : MonoBehaviour
     public static float deltaTime;
     public float timer = 0f;
 
+    //public AudioClip tiroSfx;
+
 
 
     // Start is called before the first frame update
@@ -44,7 +46,9 @@ public class Atirar : MonoBehaviour
 
         Municao = MaxMunicao;
 
+        //AudioSource shoot = GetComponent<AudioSource>();
 
+        //shoot.clip = tiroSfx;
     }
 
     // Update is called once per frame
@@ -70,6 +74,7 @@ public class Atirar : MonoBehaviour
         {
             Debug.Log("SuperTiro");
             Instantiate(SuperInkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
+            //shoot.Play();
             Municao -= MunicaoGasta;
             timer = 0f;
             CanvasAtirar.SetActive(false);

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - Municao
-  - Obstaculo
+  - SpawnTrigger
   layers:
   - Default
   - TransparentFX
