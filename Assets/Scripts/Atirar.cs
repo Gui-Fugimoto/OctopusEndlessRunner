@@ -10,7 +10,7 @@ public class Atirar : MonoBehaviour
     public GameObject InkShot;
     public GameObject SuperInkShot;
 
-    public GameObject objetoMunicao;
+   // public GameObject objetoMunicao;
 
     public Button BotaoAtirar;
 
@@ -108,7 +108,7 @@ public class Atirar : MonoBehaviour
             Debug.Log("EncostouMunicao");
             Municao = MaxMunicao;
             CanvasAtirar.SetActive(true);
-            Destroy(objetoMunicao);
+           // Destroy(objetoMunicao);
         }
 
     }
