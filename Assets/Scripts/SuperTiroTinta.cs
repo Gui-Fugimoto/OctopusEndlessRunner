@@ -10,6 +10,7 @@ public class SuperTiroTinta : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * velocity);
+        gameObject.transform.Rotate(0, -90, 0);
         Destroy(gameObject, 6);
     }
 
@@ -25,10 +26,10 @@ public class SuperTiroTinta : MonoBehaviour
             
         }
 
-        if (other.gameObject.CompareTag("Obstaculo"))
-        {
-            Destroy(gameObject);
-        }
+       // if (other.gameObject.CompareTag("Obstaculo"))
+       // //{
+        //    Destroy(gameObject);
+        //}
     }
 
 }

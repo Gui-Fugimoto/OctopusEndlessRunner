@@ -34,7 +34,7 @@ public class Atirar : MonoBehaviour
     public static float deltaTime;
     public float timer = 0f;
 
-    //public AudioClip tiroSfx;
+    public AudioSource tiroSfx;
 
 
 
@@ -74,7 +74,7 @@ public class Atirar : MonoBehaviour
         {
             Debug.Log("SuperTiro");
             Instantiate(SuperInkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
-            //shoot.Play();
+            tiroSfx.Play();
             Municao -= MunicaoGasta;
             timer = 0f;
             CanvasAtirar.SetActive(false);
@@ -87,6 +87,7 @@ public class Atirar : MonoBehaviour
             Debug.Log("atirou");
             Municao -= MunicaoGasta;
             Instantiate(InkShot, Polvo.transform.localPosition, Quaternion.Euler(transform.forward));
+            tiroSfx.Play();
             timer = 0f;
             CanvasAtirar.SetActive(false);
             StartCoroutine(ParadeAtirar());

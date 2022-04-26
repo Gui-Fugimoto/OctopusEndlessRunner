@@ -6,10 +6,13 @@ public class TiroTinta : MonoBehaviour
 {
     public float velocity;
     public GameObject Inimigo;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         GetComponent<Rigidbody>().AddForce(transform.forward * velocity);
+        gameObject.transform.Rotate(0, -90, 0);
         Destroy(gameObject, 4);
     }
 
@@ -25,10 +28,10 @@ public class TiroTinta : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.CompareTag("Obstaculo"))
-        {
-            Destroy(gameObject);
-        }
+        //if (other.gameObject.CompareTag("Obstaculo"))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
 }
