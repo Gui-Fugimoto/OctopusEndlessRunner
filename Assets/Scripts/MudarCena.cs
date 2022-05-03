@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MudarCena : MonoBehaviour
 {
-    public string nomeCena;
-    public void MudarCenas()
+    
+    public void MudarCenas(string nomeCena)
     {
-        SceneManager.LoadScene(nomeCena);
+        LoadScreenManager.Instance.LoadScene(nomeCena);
     }
 
     public void SairDoJogo()
