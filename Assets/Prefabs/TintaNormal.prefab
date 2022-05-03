@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f93636cc7d1da4685b986c2732ab32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 700
+  velocity: 900
   Inimigo: {fileID: 0}
